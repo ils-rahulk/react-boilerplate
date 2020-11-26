@@ -38,7 +38,7 @@ const LoginForm = (props) => {
                 <h4 className="form_head">Welcome Back!</h4>
                 <p className="form_pera">Please login to proceed.</p>
             </div>
-            
+
             <Field
                 label="Username"
                 name="email"
@@ -70,7 +70,8 @@ const LoginForm = (props) => {
 LoginForm.propTypes = {
     handleSubmit: PropTypes.func,
     initialize: PropTypes.func,
-    requestLogin: PropTypes.func
+    requestLogin: PropTypes.func,
+    history: PropTypes.object
 }
 
 export default reduxForm({

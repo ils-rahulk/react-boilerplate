@@ -1,15 +1,15 @@
 import React from 'react'
 // import PropTypes from 'prop-types';
-import AuthHoc from "hoc/AuthHoc";
+import AuthHoc from 'hoc/AuthHoc';
 import { AuthContainer } from '../Login/style';
 
-const TwoFa = (props) => {
+const TwoFa = () => {
     return (
-        <AuthContainer className="container-fluid">           
+        <AuthContainer className="container-fluid">
             <AuthHoc>
                 <div>two fa page</div>
             </AuthHoc>
-           
+
         </AuthContainer>
     )
 }

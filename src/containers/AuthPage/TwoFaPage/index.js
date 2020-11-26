@@ -5,10 +5,10 @@ const TwoFaPage = (props) => {
     return <TwoFa { ...props }/>;
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = () => ({
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

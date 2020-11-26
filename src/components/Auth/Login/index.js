@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import AuthHoc from "hoc/AuthHoc";
+import AuthHoc from 'hoc/AuthHoc';
 import Loader from 'shared/Loader';
 import LoginForm from './loginForm';
 import { AuthContainer } from './style';
@@ -15,7 +15,7 @@ const Login = (props) => {
             <AuthHoc>
                 <LoginForm { ...props } className="loginForm"/>
             </AuthHoc>
-           
+
         </AuthContainer>
     )
 }

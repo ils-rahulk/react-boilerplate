@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import LeftImg from 'assets/img/login_bg.jpg';
-import { cssvariable } from 'shared/cssvariable';
+// import { cssvariable } from 'shared/cssvariable';
 
 export const AuthContainer = styled.div`
     display: block;

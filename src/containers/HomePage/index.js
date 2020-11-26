@@ -6,10 +6,10 @@ const HomePage = (props) => {
     return <Home { ...props }/>;
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = () => ({
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = () => ({
 })
 
 export default connect(

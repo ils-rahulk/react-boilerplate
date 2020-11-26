@@ -6,6 +6,7 @@ import {
     Col,
     Row
 } from 'reactstrap'
+import PropTypes from 'prop-types';
 import RightAuthSideBar from 'shared/Auth/rightAuthSideBar';
 import LogoAuth from 'shared/Auth/logoSpace';
 import { FormWraper } from './style'
@@ -26,11 +27,13 @@ const AuthHoc = (props) => {
                         <CardBody className="p-0">
                             <RightAuthSideBar />
                         </CardBody>
-                    </Card>                        
+                    </Card>
                 </CardGroup>
             </Col>
         </Row>
     )
 }
-
+AuthHoc.propTypes = {
+    children: PropTypes.object,
+}
 export default AuthHoc;
