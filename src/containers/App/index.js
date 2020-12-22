@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import { Switch, Redirect, withRouter } from 'react-router-dom';
 import PublicRoute from 'hoc/routeHoc/publicRoute';
 // import PrivateRoute from 'routeHoc/privateRoute';
-import Login from 'containers/AuthPage/LoginPage';
-import TwoFa from 'containers/AuthPage/TwoFaPage';
-import HomePage from 'containers/HomePage';
+import RaterPage from 'containers/RaterPage';
 import Loader from 'shared/Loader';
 
 const loading = (
@@ -23,12 +21,8 @@ class App extends Component {
         return (
             <React.Suspense fallback={ loading }>
                 <Switch>
-                    <PublicRoute exact path="/login" name="Login Page" component={ Login }/>
-                    <PublicRoute exact path="/2fa" name="Two Fa Page" component={ TwoFa }/>
-
-                    <PublicRoute exact path="/home" name="Two Fa Page" component={ HomePage }/>
-                    {/* <PrivateRoute path="/" name="Home" component={ TheLayout } /> */}
-                    <Redirect from="/" to="/home" />
+                    <PublicRoute exact path="/energy-rater" name="Energy Rater Page" component={ RaterPage }/>
+                    <Redirect from="/" to="/energy-rater" />
                 </Switch>
             </React.Suspense>
         );

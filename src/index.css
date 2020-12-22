@@ -1,0 +1,24 @@
+body {
+    font-family: 'Open Sans' !important;
+}
+.btn-primary {
+    background-image: linear-gradient(to bottom, #3d8ef3, #3469ab);
+}
+label {
+    color: #6c849e;
+    font-size: 14px;
+    font-weight: 600;
+}
+select.form-control,
+textarea.form-control {
+    border-radius: 5px;
+    border: solid 1.2px #b5cfe5;
+    background-color: #ffffff;
+}
+.force-mb-10 {
+    margin-bottom: 10px;
+}
+.field_error {
+    color: #ff0000;
+    font-size: 14px;
+}

@@ -22,54 +22,10 @@ export const commonValidation = (expression, values, errors) => {
         // code block
     }
 }
-
-export const loginValidate = values => {
+export const raterFormValidation = values => {
     const errors = {};
-    // commonValidation('email', values, errors);
-
-    if (!values.password) {
-        errors.password = message.EMPTY_PASSWORD;
-    }
-    return errors;
-}
-
-export const forGotValidate = values => {
-    const errors = {};
-    commonValidation('email', values, errors);
-    return errors;
-}
-
-export const resetValidate = values => {
-    const errors = {};
-    if (!values.password) {
-        errors.password = message.EMPTY_PASSWORD;
-    } else if(values.password && values.password.length < 8) {
-        errors.password = message.PASSWORD_LENGTH;
-    }
-
-    if (!values.confPassword ) {
-        errors.confPassword = message.EMPTY_CONFIRM_PASSWORD ;
-    } else if (values.confPassword !== values.password) {
-        errors.confPassword = message.PASSWORD_NOT_MATCH ;
-    }
-    return errors;
-}
-
-export const clientInfoValidation = values => {
-    const errors = {};
-    const letter = /^[a-zA-Z][a-zA-Z\s]*$/;
-    if (!values.name) {
-        errors.name = message.NAME_REQUIRED;
-    } else if(values.name && !(values.name.match(letter))) {
-        errors.name = message.ONLY_CHARECTERS;
-    }
-
-    commonValidation('email', values, errors);
-
-    commonValidation('phone', values, errors);
-
-    if (!values.leastFTime) {
-        errors.leastFTime = message.EMPTY_LEAST;
+    if (!values.accessToken) {
+        errors.accessToken = message.EMPTY_ACCESS_TOKEN;
     }
     return errors;
 }

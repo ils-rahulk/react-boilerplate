@@ -1,8 +1,9 @@
 import React from 'react';
-import TwoFa from 'components/Auth/TwoFa';
+import Rater from 'components/Rater';
 import { connect } from 'react-redux';
-const TwoFaPage = (props) => {
-    return <TwoFa { ...props }/>;
+
+const RaterPage = (props) => {
+    return <Rater { ...props }/>;
 }
 
 const mapStateToProps = () => ({
@@ -14,4 +15,4 @@ const mapDispatchToProps = () => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps,
-)(TwoFaPage)
+)(RaterPage)

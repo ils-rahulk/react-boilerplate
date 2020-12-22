@@ -14,4 +14,5 @@ export const message = {
     'EMPTY_CONFIRM_PASSWORD': 'Please provide confirm password',
     'PASSWORD_LENGTH': 'Password must contain atleast 8 characters',
     'PASSWORD_NOT_MATCH': 'Password are not matching',
+    'EMPTY_ACCESS_TOKEN': 'Please provide access token'
 };
