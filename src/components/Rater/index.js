@@ -3,7 +3,7 @@ import axios from 'axios'
 import LogoSection from './logoSection';
 import FormSection from './formSection';
 import ResponseSection from './responseSection';
-import { RaterContainer, RaterTopBox } from './style';
+import { RaterContainer, RaterTopBox, BackgroundImageSection } from './style';
 import Loader from 'shared/Loader';
 const Home = () => {
     const initialValue = {
@@ -57,14 +57,17 @@ const Home = () => {
                 isLoading && <Loader />
             }
             <RaterTopBox>
-                <LogoSection />
-                <FormSection
-                    handleRaterForm = { handleRaterForm }
-                    imageFiles={ imageFiles }
-                    setImageFiles={ setImageFiles }
-                    clearImageAction={ clearImageAction }
-                    imageError={ imageError }
-                    setImageError={ setImageError } />
+                <BackgroundImageSection>
+                    <LogoSection />
+                    <FormSection
+                        handleRaterForm = { handleRaterForm }
+                        imageFiles={ imageFiles }
+                        setImageFiles={ setImageFiles }
+                        clearImageAction={ clearImageAction }
+                        imageError={ imageError }
+                        setImageError={ setImageError } />
+                </BackgroundImageSection>
+
             </RaterTopBox>
             <ResponseSection
                 visionValue={ visionValue }

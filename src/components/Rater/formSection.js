@@ -7,7 +7,7 @@ import { renderSelectField, renderField } from 'utils/formUtils';
 import { raterFormValidation as validate } from 'utils/validate';
 import UploadSample from 'assets/svg/upload_sample.svg';
 import CloseIcon from 'assets/svg/close.svg';
-import { FormContainer, PreviewRaterSection, ErrorImageSection } from './style';
+import { FormContainer, PreviewRaterSection, ErrorImageSection, PDFView } from './style';
 import { componentType, supportImage } from './constant';
 const FormSection = (props) => {
     const {
@@ -36,6 +36,16 @@ const FormSection = (props) => {
         setImageError('')
         setImageFiles(tempImageData)
     };
+
+    const openPdfFile = (data) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(data);
+        reader.onload = () => {
+            const base64data = reader.result;
+            const win = window.open('', 'Tap', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200');
+            win.document.body.innerHTML = '<iframe width="100%" height="100%" src="'+base64data+'"></iframe>';
+        }
+    }
     return (
         <FormContainer>
             <Container className="rater-form">
@@ -93,7 +103,12 @@ const FormSection = (props) => {
                                                             }
                                                         </>
                                                         :
-                                                        <iframe width="100%" height="100%" src={ imageFiles.details[ 0 ].preview }></iframe>
+                                                        <PDFView onClick={ () => openPdfFile(imageFiles.details[ 0 ]) }>
+                                                            <p className="drag-text-rater">
+                                                                View PDF File
+                                                            </p>
+                                                        </PDFView>
+                                                        // <iframe width="100%" height="100%" src={ imageFiles.details[ 0 ].preview }></iframe>
                                                 }
                                             </div>
                                         </PreviewRaterSection>

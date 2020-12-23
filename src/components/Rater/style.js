@@ -18,7 +18,7 @@ export const LogoCenterSection = styled.div`
         padding-bottom: 10px;
     }
     .center-logo {
-        width: 300px;
+        width: 270px;
         @media screen and (max-width:767px){
             width: 170px;
         }
@@ -37,8 +37,8 @@ export const LogoCenterSection = styled.div`
         color: #316ab1;
         p {
             font-weight: 600;
-            font-size: 40px;
-            line-height: 44px;
+            font-size: 33px;
+            line-height: 30px;
             font-family: 'SegoeUI';
             font-stretch: normal;
             font-style: normal;
@@ -53,13 +53,17 @@ export const LogoCenterSection = styled.div`
     }
 `;
 
-export const FormContainer = styled.div`
+export const BackgroundImageSection = styled.div`
     background : url(${ RaterBackground });
-    // background-image: linear-gradient(to bottom, #ffffff, #f4f7ff 51%, #e2e8f8);
+    
+    background-size: cover;
+`;
+
+export const FormContainer = styled.div`
+    // background : url(${ RaterBackground });
     border-radius: 12px;
     padding: 19px 20px 19px 30px;
     opacity: 0.96;
-    background-size: cover;
     .rater-form {
         background: #fff;
         padding-top: 20px;
@@ -104,7 +108,8 @@ export const FormContainer = styled.div`
             padding: 80px 0px;
         }
     }
-    .drag-text-rater {
+    .drag-text-rater {        
+        font-family: 'Segoe UI Regular';
         font-size: 16px;
         font-weight: 600;
         color: #5398f3;
@@ -112,7 +117,7 @@ export const FormContainer = styled.div`
         margin-top: 5px;
         @media screen and (max-width:767px){
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 1;
         }
     }
@@ -204,3 +209,11 @@ export const ErrorImageSection = styled.div`
         left: 28%;
     }
 `
+
+export const PDFView = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+`;
